@@ -16,15 +16,20 @@ namespace MidiMod
 			this.Value = false;
 		}
 
-		public override MidiMessage HandleInput(MidiMessage msg)
+		public override MidiMessage HandleInput(MidiMessage msg, MidiRouter router)
 		{
 			if (msg.MessageType == MidiMessageType.NoteOn) {
 				//note ON
 
+#warning workround!
+				System.Threading.Thread.Sleep (50);
 				if (Value == true) {
 #warning Default is NoteOff!
 					msg.MessageType = MidiMessageType.NoteOn;
 					msg.NoteVelocity = 0;
+
+					//workaround
+					//msg = this.InitControl ();
 				}
 
 			} else {
@@ -32,10 +37,14 @@ namespace MidiMod
 				msg = null;
 			}
 
+			/*if(msg != null)
+				Console.WriteLine (">: " + msg);
+				*/
+
 			return msg;
 		}
 
-		public override MidiMessage HandleOutput(MidiMessage msg)
+		public override MidiMessage HandleOutput(MidiMessage msg, MidiRouter router)
 		{
 			if (msg.MessageType == MidiMessageType.NoteOn) {
 				this.Value = true;

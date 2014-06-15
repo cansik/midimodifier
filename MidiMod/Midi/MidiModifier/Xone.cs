@@ -25,10 +25,12 @@ namespace MidiMod
 				controls.Add (new TwoWayEncoder (MidiMessageType.ControlChange, channel, i, ctrlCount));
 			}
 
+			controls.Add (new SimpleMakroButton (MidiMessageType.NoteOn, channel, 24));
+
 			//Upper buttons
-			for(int i = 24; i <= 39; i++)
+			for(int i = 25; i <= 39; i++)
 			{
-				controls.Add (new ToggleButton (MidiMessageType.NoteOn, channel, i));
+				controls.Add (new SimpleButton (MidiMessageType.NoteOn, channel, i));
 			}
 
 			//mid

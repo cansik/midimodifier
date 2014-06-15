@@ -52,12 +52,11 @@ namespace MidiMod
 			notifyMenu.AddItem(exitMenuItem);
 
 			// Display tray icon in upper-right-hand corner of the screen
-			var sItem = NSStatusBar.SystemStatusBar.CreateStatusItem(80);
+			var sItem = NSStatusBar.SystemStatusBar.CreateStatusItem(16);
 			sItem.Menu = notifyMenu;
-			sItem.Title = "MidiMod";
-			//sItem.Image = NSImage.FromStream(System.IO.File.OpenRead(NSBundle.MainBundle.ResourcePath + @"/electrum-bitcoin.icns"));
+			//sItem.Title = "MidiMod";
+			sItem.Image = NSImage.FromStream(System.IO.File.OpenRead(NSBundle.MainBundle.ResourcePath + @"/9b244f1232672041.icns"));
 			sItem.HighlightMode = true;
-
 
 			UpdateStatus ("Mod not startet");
 

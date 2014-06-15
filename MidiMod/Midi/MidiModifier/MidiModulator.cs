@@ -39,7 +39,7 @@ namespace MidiMod
 
 		void InitControls()
 		{
-			Console.WriteLine ("init controls...");
+			//Console.WriteLine ("init controls...");
 			foreach (ControlObject co in controls) {
 				System.Threading.Thread.Sleep (25);
 				MidiMessage msg = co.InitControl ();
@@ -51,7 +51,7 @@ namespace MidiMod
 
 		void HandleMidiDataReceivedInput2 (object sender, MidiDataReceivedEventArgs e)
 		{
-			//Console.WriteLine ("I2: " + e.Data.ToString ());
+			//Console.WriteLine ("<: " + e.Data.ToString ());
 			if (!MappingMod) {
 				ValidateBackwardMidiData (e.Data);
 			}
@@ -60,6 +60,7 @@ namespace MidiMod
 		void HandleMidiDataReceivedInput1 (object sender, MidiDataReceivedEventArgs e)
 		{
 			//Hardware Input
+			//Console.WriteLine (">: " + e.Data.ToString ());
 			ValidateForwardMidiData (Xone.FilterMessages (e.Data));
 		}
 
@@ -72,7 +73,7 @@ namespace MidiMod
 
 			//handle event
 			if (matchedControl != null) {
-				msg = matchedControl.HandleInput (msg);	
+				msg = matchedControl.HandleInput (msg, router);	
 			}
 
 			if (msg != null) {
@@ -89,7 +90,7 @@ namespace MidiMod
 
 			//handle event
 			if (matchedControl != null) {
-				msg = matchedControl.HandleOutput (msg);	
+				msg = matchedControl.HandleOutput (msg, router);	
 			}
 
 			if (msg != null) {

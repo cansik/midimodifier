@@ -9,8 +9,8 @@ namespace MidiMod
 		public Int32 MidiChannel { get; set; }
 		public Int32 NoteNumber { get; set; }
 
-		public abstract MidiMessage HandleInput(MidiMessage msg);
-		public abstract MidiMessage HandleOutput(MidiMessage msg);
+		public abstract MidiMessage HandleInput(MidiMessage msg, MidiRouter router);
+		public abstract MidiMessage HandleOutput(MidiMessage msg, MidiRouter router);
 
 		public MidiMessage InitControl()
 		{

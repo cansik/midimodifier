@@ -12,12 +12,12 @@ namespace MidiMod
 			this.NoteNumber = NoteNumber;
 		}
 
-		public override MidiMessage HandleInput(MidiMessage msg)
+		public override MidiMessage HandleInput(MidiMessage msg, MidiRouter router)
 		{
 			return msg;
 		}
 
-		public override MidiMessage HandleOutput(MidiMessage msg)
+		public override MidiMessage HandleOutput(MidiMessage msg, MidiRouter router)
 		{
 			//Green (Orange = + 36)
 			msg.NoteNumber = this.NoteNumber;

@@ -15,8 +15,9 @@ namespace MidiMod
 			this.IncRange = IncRange;
 		}
 
-		public override MidiMessage HandleInput(MidiMessage msg)
+		public override MidiMessage HandleInput(MidiMessage msg, MidiRouter router)
 		{
+			System.Threading.Thread.Sleep (200);
 			if (msg.NoteVelocity == 1) {
 				//right
 				msg.NoteNumber += this.IncRange;
@@ -25,7 +26,7 @@ namespace MidiMod
 			return msg;
 		}
 
-		public override MidiMessage HandleOutput(MidiMessage msg)
+		public override MidiMessage HandleOutput(MidiMessage msg, MidiRouter router)
 		{
 			return msg;
 		}

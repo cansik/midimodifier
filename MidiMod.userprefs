@@ -1,22 +1,23 @@
-﻿<Properties MonoDevelop.MonoMac.LastXamMacNagTime="02/25/2014 19:35:02">
+﻿<Properties MonoDevelop.MonoMac.LastXamMacNagTime="6/15/2014 12:23:09 AM">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="MidiMod/Midi/MidiModifier/Xone.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MidiMod/Midi/MidiModifier/SimpleMakroButton.cs">
     <Files>
-      <File FileName="MidiMod/Midi/MidiModifier/MidiModulator.cs" Line="13" Column="10" />
+      <File FileName="MidiMod/Midi/MidiModifier/MidiModulator.cs" Line="1" Column="1" />
       <File FileName="MidiMod/Midi/MidiModifier/TwoWayEncoder.cs" Line="1" Column="1" />
-      <File FileName="MidiMod/Midi/MidiModifier/ToggleButton.cs" Line="17" Column="4" />
-      <File FileName="MidiMod/Midi/MidiModifier/MidiModifier.cs" Line="18" Column="32" />
-      <File FileName="MidiMod/Midi/MidiInterface/MidiMessage.cs" Line="35" Column="16" />
-      <File FileName="MidiMod/Midi/MidiModifier/ControlObject.cs" Line="21" Column="25" />
+      <File FileName="MidiMod/Midi/MidiModifier/ToggleButton.cs" Line="1" Column="1" />
+      <File FileName="MidiMod/Midi/MidiModifier/MidiModifier.cs" Line="1" Column="1" />
+      <File FileName="MidiMod/Midi/MidiInterface/MidiMessage.cs" Line="1" Column="1" />
+      <File FileName="MidiMod/Midi/MidiModifier/ControlObject.cs" Line="1" Column="1" />
       <File FileName="MidiMod/MainWindowController.cs" Line="1" Column="1" />
-      <File FileName="MidiMod/AppDelegate.cs" Line="2" Column="1" />
-      <File FileName="MidiMod/Midi/MidiModifier/Xone.cs" Line="14" Column="4" />
-      <File FileName="MidiMod/Midi/MidiModifier/SimpleButton.cs" Line="14" Column="3" />
+      <File FileName="MidiMod/AppDelegate.cs" Line="1" Column="1" />
+      <File FileName="MidiMod/Midi/MidiModifier/Xone.cs" Line="1" Column="1" />
+      <File FileName="MidiMod/Midi/MidiModifier/SimpleButton.cs" Line="1" Column="1" />
       <File FileName="MidiMod/Midi/MidiInterface/MidiDataReceivedEventArgs.cs" Line="1" Column="1" />
-      <File FileName="MidiMod/Midi/MidiInterface/MidiRouter.cs" Line="30" Column="55" />
+      <File FileName="MidiMod/Midi/MidiInterface/MidiRouter.cs" Line="1" Column="1" />
       <File FileName="MidiMod/Midi/MidiInterface/MidiMessageType.cs" Line="1" Column="1" />
-      <File FileName="MidiMod/Midi/MidiInterface/MidiHandler.cs" Line="82" Column="41" />
-      <File FileName="MidiMod/TestClass.cs" Line="10" Column="4" />
+      <File FileName="MidiMod/Midi/MidiInterface/MidiHandler.cs" Line="1" Column="1" />
+      <File FileName="MidiMod/TestClass.cs" Line="1" Column="1" />
+      <File FileName="MidiMod/Midi/MidiModifier/SimpleMakroButton.cs" Line="16" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
