@@ -1,11 +1,11 @@
-﻿<Properties MonoDevelop.MonoMac.LastXamMacNagTime="11/13/2014 7:47:10 PM">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+﻿<Properties MonoDevelop.MonoMac.LastXamMacNagTime="11/13/2014 8:19:55 PM">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
   <MonoDevelop.Ide.Workbench ActiveDocument="MidiMod/AppDelegate.cs">
     <Files>
-      <File FileName="MidiMod/Midi/MidiInterface/MidiMessage.cs" Line="3" Column="3" />
+      <File FileName="MidiMod/Midi/MidiInterface/MidiMessage.cs" Line="1" Column="1" />
       <File FileName="MidiMod/TestClass.cs" Line="1" Column="1" />
-      <File FileName="MidiMod/AppDelegate.cs" Line="6" Column="6" />
-      <File FileName="MidiMod/Midi/MidiModifier/MidiModulator.cs" Line="4" Column="4" />
+      <File FileName="MidiMod/AppDelegate.cs" Line="41" Column="41" />
+      <File FileName="MidiMod/Midi/MidiModifier/MidiModulator.cs" Line="1" Column="1" />
       <File FileName="MidiMod/Main.cs" Line="1" Column="1" />
       <File FileName="MidiMod/Midi/MidiModifier/ToggleButton.cs" Line="1" Column="1" />
       <File FileName="MidiMod/MainWindowController.cs" Line="1" Column="1" />

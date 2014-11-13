@@ -5,16 +5,20 @@
 	<key>CFBundleDisplayName</key>
 	<string>MidiMod</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.your-company.MidiMod</string>
+	<string>com.nexpose.midimod</string>
 	<key>CFBundleName</key>
 	<string>MidiMod</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>LSMinimumSystemVersion</key>
-	<string>10.6</string>
+	<string>10.10</string>
 	<key>NSMainNibFile</key>
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
+	<key>LSApplicationCategoryType</key>
+	<string>public.app-category.graphics-design</string>
+	<key>CFBundleIconFile</key>
+	<string>1402780405_43371</string>
 </dict>
 </plist>

@@ -41,6 +41,10 @@ namespace MidiMod
 				(a,b) => {  });
 			statusMenuItem.Enabled = false;
 
+			var versionMenuItem = new NSMenuItem("Version 1.0", 
+				(a,b) => {  });
+			versionMenuItem.Enabled = false;
+
 			var seperatorItem = NSMenuItem.SeparatorItem;
 
 			notifyMenu.AutoEnablesItems = false;
@@ -48,6 +52,7 @@ namespace MidiMod
 
 			// Just add 'Quit' command
 			notifyMenu.AddItem (statusMenuItem);
+			notifyMenu.AddItem (versionMenuItem);
 			notifyMenu.AddItem (seperatorItem);
 			notifyMenu.AddItem (startMidiModMenuItem);
 			notifyMenu.AddItem (mappingmodMidiModMenuItem);

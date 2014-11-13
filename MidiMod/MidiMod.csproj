@@ -25,7 +25,6 @@
     <UseSGen>false</UseSGen>
     <IncludeMonoRuntime>false</IncludeMonoRuntime>
     <EnablePackageSigning>false</EnablePackageSigning>
-    <CodeSigningKey>Mac Developer</CodeSigningKey>
     <EnableCodeSigning>false</EnableCodeSigning>
     <CreatePackage>false</CreatePackage>
   </PropertyGroup>
@@ -109,5 +108,6 @@
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <BundleResource Include="Resources\9b244f1232672041.icns" />
+    <BundleResource Include="Resources\1402780405_43371.icns" />
   </ItemGroup>
 </Project>
