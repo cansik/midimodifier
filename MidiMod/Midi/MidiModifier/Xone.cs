@@ -28,9 +28,14 @@ namespace MidiMod
 			controls.Add (new SimpleMakroButton (MidiMessageType.NoteOn, channel, 24));
 
 			//Upper buttons
-			for(int i = 25; i <= 39; i++)
+			for(int i = 25; i <= 31; i++)
 			{
 				controls.Add (new SimpleButton (MidiMessageType.NoteOn, channel, i));
+			}
+
+			for(int i = 32; i <= 39; i++)
+			{
+				controls.Add (new NoneButton (MidiMessageType.NoteOn, channel, i));
 			}
 
 			//mid

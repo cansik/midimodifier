@@ -20,7 +20,7 @@ namespace MidiMod
 		public AppDelegate ()
 		{
 		}
-
+			
 		public override void FinishedLaunching (NSObject notification)
 		{
 //			mainWindowController = new MainWindowController ();
@@ -29,7 +29,10 @@ namespace MidiMod
 			// Construct menu that will be displayed when tray icon is clicked
 			var notifyMenu = new NSMenu();
 			var exitMenuItem = new NSMenuItem("Quit", 
-				(a,b) => { System.Environment.Exit(0); });
+				(a,b) => { 
+					NSApplication.SharedApplication.Terminate(this);
+					//System.Environment.Exit(0);
+				});
 
 			var startMidiModMenuItem = new NSMenuItem("Run", 
 				(a,b) => { RunMidiMod(); });

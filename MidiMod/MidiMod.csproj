@@ -97,6 +97,7 @@
     <Compile Include="Midi\MidiModifier\SimpleButton.cs" />
     <Compile Include="TestClass.cs" />
     <Compile Include="Midi\MidiModifier\SimpleMakroButton.cs" />
+    <Compile Include="Midi\MidiModifier\NoneButton.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="MainWindow.xib" />
