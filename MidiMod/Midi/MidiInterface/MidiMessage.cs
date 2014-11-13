@@ -32,27 +32,19 @@ namespace CoreMidiLib
 			byte DataByte = midiData [1];
 			byte USEMByte = midiData [2];
 
-			//split data byte (maybe not so nice!)
-			string bitData = Convert.ToString(StatusByte,2);
+			byte typeData = (byte)((StatusByte & 0xF0) >> 4);
+			byte channelData = (byte)(StatusByte & 0x0F);
 
-			//fill with zeros
-			while (bitData.Length < 8) {
-				bitData = 0 + bitData;
-			}
-
-			string typeData = bitData.Substring (0, 4);
-			string channelData = bitData.Substring (4, 4);
-
-			MidiMessageType mType = (MidiMessageType)BitToByte(typeData);
+			MidiMessageType mType = (MidiMessageType)typeData;
 
 			//note on + value zero > note off
 			if (mType == MidiMessageType.NoteOn && USEMByte == 0) {
 				mType = MidiMessageType.NoteOff;
 			}
 
-			this.MessageType = mType;
+			MessageType = mType;
 
-			this.MidiChannel = BitToByte(channelData);
+			this.MidiChannel = channelData;
 
 			this.NoteNumber = DataByte;
 			this.NoteVelocity = USEMByte;
@@ -63,11 +55,14 @@ namespace CoreMidiLib
 		{
 			byte[] data = new byte[3];
 
+			//cast
+			byte messageType = (byte)MessageType;
+			byte midiChannel = (byte)MidiChannel;
+
 			//NoteNumber
-			string binary = Convert.ToString ((byte)this.MessageType, 2) + Convert.ToString ((byte)this.MidiChannel, 2);
-			data [0] = BitToByte(binary);
-			data [1] = (byte)this.NoteNumber;
-			data [2] = (byte)this.NoteVelocity;
+			data [0] = (byte)((messageType << 4) | midiChannel);
+			data [1] = (byte)NoteNumber;
+			data [2] = (byte)NoteVelocity;
 
 			return new MonoMac.CoreMidi.MidiPacket (this.TimeStamp, data);
 		}
@@ -75,22 +70,6 @@ namespace CoreMidiLib
 		public override string ToString ()
 		{
 			return string.Format ("[MidiMessage: MessageType={0}, MidiChannel={1}, NoteNumber={2}, NoteVelocity={3}]", MessageType, MidiChannel, NoteNumber, NoteVelocity);
-		}
-
-		private byte BitToByte(string bit)
-		{
-			int data = 0;
-			int dataslot = 1;
-
-			for (int i = bit.Length - 1; i >= 0; i--) {
-				if (bit [i].ToString () == "1") {
-					data += dataslot;
-				}
-				
-				dataslot = dataslot * 2;
-			}
-
-			return (byte)data;
 		}
 	}
 }

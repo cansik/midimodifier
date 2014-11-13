@@ -1,0 +1,230 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3311BD530000000000000000 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36A2C9F10000000000000000 /* Cocoa.framework */; };
+		32DEDA370000000000000000 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 366FE6D50000000000000000 /* Foundation.framework */; };
+		1853F5700000000000000000 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BE5020E0000000000000000 /* MainWindow.xib */; };
+		383A83E20000000000000000 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BCB90800000000000000000 /* MainMenu.xib */; };
+		1BB21EF20000000000000000 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F432B900000000000000000 /* Info.plist */; };
+		3F29BA020000000000000000 /* 9b244f1232672041.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2BAC6A000000000000000000 /* 9b244f1232672041.icns */; };
+		1D2E50970000000000000000 /* MainWindow.h in Sources */ = {isa = PBXBuildFile; fileRef = 20BF5D350000000000000000 /* MainWindow.h */; };
+		79521C700000000000000000 /* MainWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = B262E6500000000000000000 /* MainWindow.m */; };
+		E8457E700000000000000000 /* MainWindowController.h in Sources */ = {isa = PBXBuildFile; fileRef = 121564850000000000000000 /* MainWindowController.h */; };
+		11E281690000000000000000 /* MainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15738E070000000000000000 /* MainWindowController.m */; };
+		1722A2C80000000000000000 /* AppDelegate.h in Sources */ = {isa = PBXBuildFile; fileRef = 1AB3AF660000000000000000 /* AppDelegate.h */; };
+		6FC787300000000000000000 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D851100000000000000000 /* AppDelegate.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A42050300000000000000000 /* MidiMod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "MidiMod.app"; path = "MidiMod.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		36A2C9F10000000000000000 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Cocoa.framework"; path = "System/Library/Frameworks/Cocoa.framework"; sourceTree = SDKROOT; };
+		366FE6D50000000000000000 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Foundation.framework"; path = "System/Library/Frameworks/Foundation.framework"; sourceTree = SDKROOT; };
+		1BE5020E0000000000000000 /* MainWindow.xib */ = {isa = PBXFileReference; name = "MainWindow.xib"; path = "MainWindow.xib"; sourceTree = "<group>"; };
+		3BCB90800000000000000000 /* MainMenu.xib */ = {isa = PBXFileReference; name = "MainMenu.xib"; path = "MainMenu.xib"; sourceTree = "<group>"; };
+		1F432B900000000000000000 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info.plist"; path = "Info.plist"; sourceTree = "<group>"; };
+		2BAC6A000000000000000000 /* 9b244f1232672041.icns */ = {isa = PBXFileReference; name = "9b244f1232672041.icns"; path = "9b244f1232672041.icns"; sourceTree = "<group>"; };
+		20BF5D350000000000000000 /* MainWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "MainWindow.h"; path = "MainWindow.h"; sourceTree = "<group>"; };
+		B262E6500000000000000000 /* MainWindow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "MainWindow.m"; path = "MainWindow.m"; sourceTree = "<group>"; };
+		121564850000000000000000 /* MainWindowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "MainWindowController.h"; path = "MainWindowController.h"; sourceTree = "<group>"; };
+		15738E070000000000000000 /* MainWindowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "MainWindowController.m"; path = "MainWindowController.m"; sourceTree = "<group>"; };
+		1AB3AF660000000000000000 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "AppDelegate.h"; path = "AppDelegate.h"; sourceTree = "<group>"; };
+		A8D851100000000000000000 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "AppDelegate.m"; path = "AppDelegate.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		236C40710000000000000000 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3311BD530000000000000000 /* Cocoa.framework in Frameworks */,
+				32DEDA370000000000000000 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		385B1FF00000000000000000 = {
+			isa = PBXGroup;
+			children = (
+				2E1F664B0000000000000000 /* MidiMod */,
+				11C9E4770000000000000000 /* Frameworks */,
+				38D28C250000000000000000 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		38D28C250000000000000000 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A42050300000000000000000 /* MidiMod.app */,
+			);
+			name = "Products";
+			sourceTree = "<group>";
+		};
+		11C9E4770000000000000000 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				366FE6D50000000000000000 /* Foundation.framework */,
+				36A2C9F10000000000000000 /* Cocoa.framework */,
+			);
+			name = "Frameworks";
+			sourceTree = "<group>";
+		};
+		2E1F664B0000000000000000 /* MidiMod */ = {
+			isa = PBXGroup;
+			children = (
+				2BAC6A000000000000000000 /* 9b244f1232672041.icns */,
+				1AB3AF660000000000000000 /* AppDelegate.h */,
+				1F432B900000000000000000 /* Info.plist */,
+				3BCB90800000000000000000 /* MainMenu.xib */,
+				20BF5D350000000000000000 /* MainWindow.h */,
+				1BE5020E0000000000000000 /* MainWindow.xib */,
+				121564850000000000000000 /* MainWindowController.h */,
+				97719A400000000000000000 /* Supporting Files */,
+			);
+			name = "MidiMod";
+			sourceTree = "<group>";
+		};
+		97719A400000000000000000 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A8D851100000000000000000 /* AppDelegate.m */,
+				B262E6500000000000000000 /* MainWindow.m */,
+				15738E070000000000000000 /* MainWindowController.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		64B322D00000000000000000 /* MidiMod */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F8EDF290000000000000000 /* Build configuration list for PBXNativeTarget "MidiMod" */;
+			buildPhases = (
+				E05F4BD00000000000000000 /* Sources */,
+				236C40710000000000000000 /* Frameworks */,
+				36F094480000000000000000 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MidiMod";
+			productName = "MidiMod";
+			productReference = A42050300000000000000000 /* MidiMod.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3B980C530000000000000000 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 314AACB10000000000000000 /* Build configuration list for PBXProject "MidiMod" */;
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 385B1FF00000000000000000;
+			productRefGroup = 38D28C250000000000000000 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				64B322D00000000000000000 /* MidiMod */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		36F094480000000000000000 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1853F5700000000000000000 /* MainWindow.xib in Resources */,
+				383A83E20000000000000000 /* MainMenu.xib in Resources */,
+				1BB21EF20000000000000000 /* Info.plist in Resources */,
+				3F29BA020000000000000000 /* 9b244f1232672041.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E05F4BD00000000000000000 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D2E50970000000000000000 /* MainWindow.h in Sources */,
+				79521C700000000000000000 /* MainWindow.m in Sources */,
+				E8457E700000000000000000 /* MainWindowController.h in Sources */,
+				11E281690000000000000000 /* MainWindowController.m in Sources */,
+				1722A2C80000000000000000 /* AppDelegate.h in Sources */,
+				6FC787300000000000000000 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		16715C820000000000000000 /* MonoMac */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				SDKROOT = macosx;
+			};
+			name = MonoMac;
+		};
+		269786D70000000000000000 /* MonoMac */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				PRODUCT_NAME = "MidiMod";
+				WRAPPER_EXTENSION = app;
+			};
+			name = MonoMac;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		314AACB10000000000000000 /* Build configuration list for PBXProject "MidiMod" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16715C820000000000000000 /* MonoMac */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = MonoMac;
+		};
+		3F8EDF290000000000000000 /* Build configuration list for PBXNativeTarget "MidiMod" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				269786D70000000000000000 /* MonoMac */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = MonoMac;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3B980C530000000000000000 /* Project object */;
+}
