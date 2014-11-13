@@ -5,6 +5,7 @@ using MonoMac.Foundation;
 using MonoMac.AppKit;
 using MonoMac.ObjCRuntime;
 using System.Diagnostics;
+using System.ComponentModel;
 
 namespace MidiMod
 {
@@ -14,6 +15,7 @@ namespace MidiMod
 
 		MidiModulator mod;
 		NSMenuItem statusMenuItem;
+		NSStatusItem sItem;
 
 		public AppDelegate ()
 		{
@@ -52,9 +54,10 @@ namespace MidiMod
 			notifyMenu.AddItem(exitMenuItem);
 
 			// Display tray icon in upper-right-hand corner of the screen
-			var sItem = NSStatusBar.SystemStatusBar.CreateStatusItem(16);
+			sItem = NSStatusBar.SystemStatusBar.CreateStatusItem(16); //def 16
 			sItem.Menu = notifyMenu;
-			//sItem.Title = "MidiMod";
+			sItem.Title = "MidiMod";
+			sItem.ToolTip = "Midi Mod";
 			sItem.Image = NSImage.FromStream(System.IO.File.OpenRead(NSBundle.MainBundle.ResourcePath + @"/9b244f1232672041.icns"));
 			sItem.HighlightMode = true;
 
@@ -68,13 +71,31 @@ namespace MidiMod
 
 		void UpdateStatus(string msg)
 		{
-			statusMenuItem.Title = msg;
+			statusMenuItem.InvokeOnMainThread (delegate {
+				statusMenuItem.Title = msg;
+			});
+		}
+
+		void UpdateTitle(string msg)
+		{
+			statusMenuItem.InvokeOnMainThread (delegate {
+				sItem.Length = msg.Length * 6 + 16;
+				sItem.Title = msg;
+			});
 		}
 
 		void RunMidiMod()
 		{
-			mod = new MidiModulator ();
-			UpdateStatus ("Mod startet");
+			UpdateStatus ("starting mod...");
+			UpdateTitle("starting...");
+			BackgroundWorker worker = new BackgroundWorker ();
+			worker.DoWork += (object sender, DoWorkEventArgs e) => {
+				mod = new MidiModulator ();
+				UpdateStatus ("mod started!");
+				UpdateTitle("");
+			};
+				
+			worker.RunWorkerAsync ();
 		}
 
 		void ActivateMappingMod()
